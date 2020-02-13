@@ -13,4 +13,6 @@ async def play_nim(ctx):
     await ctx.send("Still working on it, kiddo.")
 
 bot.run(token)
+#Commenting:   See you did a lot. 
+# Btw, what does .gitignore contains and is it used in the actual bot work, or just acts as info?
 
