@@ -17,9 +17,40 @@ async def play_nim(ctx):
 async def flip_coin(ctx):
     await ctx.send(random.choice(["Heads", "Tails"]))
 
-@bot.command(name="average")
-async def average(ctx, a,b ,c):
-    await ctx.send((a+b+c)/2)
+@bot.command(name="add")
+async def add(ctx, *args):
+    try:
+        await ctx.send(sum(*args))
+    except:
+        await ctx.send("Value error")
+
+@bot.command(name="subtract")
+async def sub(ctx, x, y):
+    try:
+        await ctx.send(x-y)
+    except:
+        await ctx.send("Value error")
+
+@bot.command(name="multiply")
+async def mult(ctx, x, y):
+    try:
+        await ctx.send(x*y)
+    except:
+        await ctx.send("Value error")
+
+@bot.command(name="divide")
+async def div(ctx, x, y):
+    try:
+        await ctx.send(x/y)
+    except:
+        await ctx.send("Value error")
+        
+@bot.command(name="to_power")
+async def pow(ctx, x, y):
+    try:
+        await ctx.send(x^y)
+    except:
+        await ctx.send("Value error")
 
 bot.run(token)
 
