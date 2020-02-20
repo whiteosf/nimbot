@@ -48,7 +48,7 @@ async def div(ctx, x, y):
 @bot.command(name="to_power")
 async def pow(ctx, x, y):
     try:
-        await ctx.send(x^y)
+        await ctx.send(x**y)
     except:
         await ctx.send("Value error")
 
